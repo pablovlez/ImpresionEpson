@@ -141,6 +141,14 @@ public final class ImpresionEpson {
         }
     }
 
+    /**
+     * Centra en el texto en la feactura
+     * 
+     *
+     * @param texto Texto a centrar
+     *  
+     * 
+     */
     public void centrar(String texto) {
 
         int size = texto.length();
@@ -258,26 +266,26 @@ public final class ImpresionEpson {
     }
 
     public void establecerFinDetalleProductos(String datosFnDetProd[]) {
-        
-        String subtotal=datosFnDetProd[0];
-        String descuentos=datosFnDetProd[1];
-        String total=datosFnDetProd[2];
+
+        String subtotal = datosFnDetProd[0];
+        String descuentos = datosFnDetProd[1];
+        String total = datosFnDetProd[2];
         correrEspacios(18);
         adicionarTexto("Subtotal:");
         correrEspacios(5);
-        correrEspacios(8-subtotal.length());
+        correrEspacios(8 - subtotal.length());
         adicionarTexto(subtotal);
         adicionarTexto("\n");
         correrEspacios(17);
         adicionarTexto("Descuento:");
         correrEspacios(5);
-        correrEspacios(8-descuentos.length());
+        correrEspacios(8 - descuentos.length());
         adicionarTexto(descuentos);
         adicionarTexto("\n");
         correrEspacios(21);
         adicionarTexto("Total:");
         correrEspacios(5);
-        correrEspacios(8-total.length());
+        correrEspacios(8 - total.length());
         adicionarTexto(total);
         adicionarTexto("\n");
         dibujaLinea();
